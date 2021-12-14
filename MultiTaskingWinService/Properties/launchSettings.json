@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "MultiTaskingWinService": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
