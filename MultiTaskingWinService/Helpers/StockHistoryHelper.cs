@@ -43,12 +43,13 @@ namespace C9ISM.Scheduler.Helpers
                     url = url.Replace("EQstrdate", fname);
                 }
                 //Check file exist on server
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-                request.Timeout = 30000;
+               
 
                 int flag;
                 try
                 {
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                    request.Timeout = 30000;
                     HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                     flag = 1;
                 }
