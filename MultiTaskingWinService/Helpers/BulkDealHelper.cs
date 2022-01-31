@@ -7,8 +7,6 @@ using C9ISM.Scheduler.Logger;
 using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
-using System.Data.SqlClient;
-using System.IO;
 using System.Text.RegularExpressions;
 
 namespace C9ISM.Scheduler.Helpers

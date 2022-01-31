@@ -7,11 +7,14 @@ using System;
 using Microsoft.Extensions.Hosting;
 using System.Threading;
 using MultiTaskingWinService.Helper;
+using C9ISM.Scheduler.Logger;
 
 namespace MultiTaskingWinService.Services
 {
     class EmailService : IHostedService, IDisposable
     {
+        public static readonly C9BasicLogger _logger = new C9BasicLogger();
+
         private Timer _timer;
 
         readonly MailSettings _mailSettings = null;
@@ -71,8 +74,8 @@ namespace MultiTaskingWinService.Services
             catch (Exception ex)
             {
                 Console.WriteLine("Error:" + ex.StackTrace);
-                //Log Exception Details
-                throw;
+                _logger.LogWrite(ex.StackTrace);
+                throw; //Log Exception Details from originated
             }
         }
 
